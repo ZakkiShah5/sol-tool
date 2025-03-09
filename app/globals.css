@@ -1,13 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
 
-@theme{
+@theme {
     --font-display: "DM Sans", "sans-serif";
 }
 
-.active{
-    background:  linear-gradient(45deg, rgba(220,31,255,1) 0%, rgba(0,181,205,1) 81%, rgba(0,255,163,1) 100%);
+.active {
+    background: linear-gradient(45deg, rgba(220, 31, 255, 1) 0%, rgba(0, 181, 205, 1) 81%, rgba(0, 255, 163, 1) 100%);
     -webkit-background-clip: text;
     color: transparent;
     font-weight: 600;
+}
+
+.banner {
+    background: rgba(19, 98, 119, 1);
+    background: linear-gradient(to right, rgba(19, 98, 119, 1) 0%, rgba(35, 182, 221, 1) 47%, rgba(19, 98, 119, 1) 100%);
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, rgba(220, 31, 255, 1) 0%, rgba(0, 181, 205, 1) 59%, rgba(0, 237, 173, 1) 90%, rgba(0, 255, 163, 1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.gradient-text2 {
+    background: linear-gradient(to bottom, rgba(0, 255, 163, 1) 0%, rgba(0, 181, 205, 1) 32%, rgba(220, 31, 255, 1) 89%, rgba(220, 31, 255, 1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.border-grad {
+    position: relative;
+    border: 2px solid transparent; /* Transparent border */
+    border-radius: 5px; /* Rounded corners */
+    background: linear-gradient(#ECFFFF, #ECFFFF) padding-box, 
+                linear-gradient(45deg, rgba(220, 31, 255, 1) 0%, rgba(0, 181, 205, 1) 81%, rgba(0, 255, 163, 1) 100%) border-box;
+}
+
+
+
+/* Switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+/* Hide default checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider styling */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    transition: 0.4s;
+    border: 1px solid #E6E8EC;
+    border-radius: 30px;
+}
+
+/* Circle inside the switch */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #B1B5C3;
+
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* When the switch is checked */
+input:checked+.slider {
+    border: 1px solid #71e3f5;
+    background-color: #b3f5ff;
+}
+
+input:checked+.slider:before {
+    transform: translateX(30px);
+    background-color: #00c8f8;
 }

@@ -44,19 +44,19 @@ const Header = () => {
             : 'hidden'
         }`}
       >
-        <Link href='/' className='p-2 border-[#E6E8EC] border-b'>
+        <Link href='/' className='active p-2 border-[#E6E8EC] md:border-none md:p-0 border-b'>
           Creater
         </Link>
-        <Link href='/mint' className='p-2 border-[#E6E8EC] border-b'>
+        <Link href='/mint' className='p-2 border-[#E6E8EC] md:border-none md:p-0 border-b'>
           Minting/Burn
         </Link>
-        <Link href='/freeze' className='p-2 border-[#E6E8EC] border-b'>
+        <Link href='/freeze' className='p-2 border-[#E6E8EC] md:border-none md:p-0 border-b'>
           Freezing
         </Link>
-        <Link href='/meta' className='p-2 border-[#E6E8EC] border-b'>
+        <Link href='/meta' className='p-2 border-[#E6E8EC] md:border-none md:p-0 border-b'>
           Meta
         </Link>
-        <Link href='/owner' className='p-2 border-[#E6E8EC] border-b'>
+        <Link href='/owner' className='p-2 border-[#E6E8EC] md:border-none md:p-0 border-b'>
           Ownership
         </Link>
       </nav>
