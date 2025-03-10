@@ -16,7 +16,7 @@ export default function TokenForm () {
   return (
     <div className='max-w-4xl mx-auto p-6'>
       <form className='mt-8'>
-        <div className='grid grid-cols-2 gap-6'>
+        <div className='grid md:grid-cols-2 gap-6'>
           <div className='flex flex-col'>
             <label className='text-black mb-1'>
               <sup className='text-red-500 font-bold'>*</sup>Name:
@@ -69,7 +69,7 @@ export default function TokenForm () {
           </div>
         </div>
 
-        <div className='flex mt-5 justify-between gap-6'>
+        <div className='flex-col md:flex-row flex mt-5 justify-between gap-6'>
           <div className='flex flex-col flex-1/2'>
             <label className='text-black mb-1'>
               <sup className='text-red-500 font-bold'>*</sup>Image:
@@ -115,7 +115,7 @@ export default function TokenForm () {
           <small className='text-gray-500'>
             Add links to your token metadata
           </small>
-          <div className='flex items-center justify-between gap-5'>
+          <div className='flex-col md:flex-row flex md:items-center justify-between gap-5'>
             <div className='flex flex-col'>
               <label className='text-black mb-1'>Website:</label>
               <input
@@ -157,7 +157,7 @@ export default function TokenForm () {
             <img src='chevup.png' alt='chev' />
           </div>
 
-          <div className='flex items-center gap-1'>
+          <div className='flex items-center gap-1 flex-wrap'>
             <h1 className='font-bold text-[16px]'>
               Modify Creator Information
             </h1>
@@ -185,8 +185,8 @@ export default function TokenForm () {
             and Update Authority. Revoke them to attract more investors.
           </small>
 
-          <div className="flex gap-6 my-6">
-            <div className="flex rounded gap-3 py-5 px-2 border-[#E6E8EC] border-2 bg-[#FCFCFD]">
+          <div className="flex flex-col  md:flex-row gap-6 my-6">
+            <div className="flex  rounded gap-3 py-5 px-2 border-[#E6E8EC] border-2 bg-[#FCFCFD]">
             <div className='text-18px'>
                 <FaRegSnowflake  />
                 </div>
