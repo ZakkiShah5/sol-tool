@@ -25,10 +25,15 @@ const Header = () => {
     setMenuOpen(prev => !prev) // Toggle the mobile menu
   }
 
+  const handleLangChange =(lang)=>{
+    changeLanguage(lang)
+    setIsOpen(false)
+  }
+
   return (
     <header className="max-w-6xl py-3 px-2 mx-auto bg-[#FCFCFD] flex justify-between items-center">
       <Link href="/" className="flex items-center gap-2">
-        <div className="lg:hidden">
+        <div className="lg:hidden flex">
           <button onClick={handleMenuToggle} className="text-[18px]">
             <FaBars />
           </button>
@@ -42,7 +47,7 @@ const Header = () => {
       <nav
         className={`lg:flex lg:gap-9 text-[16px] font-[Poppins] ${
           menuOpen
-            ? "flex flex-col text-center gap-2 absolute top-24 left-0 w-full bg-[#FCFCFD]"
+            ? "flex flex-col text-center gap-2 absolute z-30 top-24 left-0 w-full bg-[#FCFCFD]"
             : "hidden"
         }`}
       >
@@ -71,12 +76,12 @@ const Header = () => {
           <SlGlobe className="text-xl cursor-pointer" onClick={handleToggle} />
 
           {isOpen && (
-            <div className="absolute bg-white text-black shadow-md rounded mt-4 w-40">
+            <div className="absolute z-20 bg-white text-black shadow-md rounded mt-4 w-40">
               <ul>
-                <li onClick={() => changeLanguage("en")} className="p-2 hover:bg-[#02CCE6] hover:text-white cursor-pointer">
+                <li onClick={() => handleLangChange("en")} className="p-2 hover:bg-[#02CCE6] hover:text-white cursor-pointer">
                   English
                 </li>
-                <li onClick={() => changeLanguage("ko")} className="p-2 hover:bg-[#02CCE6] hover:text-white cursor-pointer">
+                <li onClick={() => handleLangChange("ko")} className="p-2 hover:bg-[#02CCE6] hover:text-white cursor-pointer">
                   한국어
                 </li>
               </ul>

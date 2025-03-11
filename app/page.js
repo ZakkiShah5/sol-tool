@@ -8,9 +8,12 @@ import LiquidityPool from "@/component/LiquidityPool";
 import Faq from "@/component/Faq";
 import Footer from "@/component/Footer";
 import { useLanguage } from "./Context/LanguageContext";
+import FeeModal from "@/component/FeeModal";
+import { useState } from "react";
 
 export default function Home() {
   const { language } = useLanguage();
+  const [openMod, setOpenMod] = useState(false);
 
   const translations = {
     en: {
@@ -24,16 +27,22 @@ export default function Home() {
       description: "코딩 없이 7+1 단계만으로 Solana SPL 토큰을 쉽게 생성하세요.",
     },
   };
+
+  const handleMod =()=>{
+    setOpenMod(!openMod);
+  }
+  
   return (
     <>
      <Header />
      <Banner />
      <section className="font-[Poppins] max-w-6xl py-3 px-2 mx-auto">
-      <div className="flex justify-between items-center">
+      <div className="relative flex justify-between items-center">
         <div></div>
-        <button className="text-[#02CCE6] border-[#02CCE6] border rounded px-2 py-1 cursor-pointer">
+        <button onClick={()=> handleMod()} className="text-[#02CCE6] border-[#02CCE6] border rounded px-2 py-1 cursor-pointer">
           {translations[language].priorityFees}
         </button>
+        { openMod && <FeeModal />}
       </div>
 
       <div className="text-center">
