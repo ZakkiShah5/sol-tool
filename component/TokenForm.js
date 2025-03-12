@@ -323,7 +323,7 @@ export default function TokenForm () {
               {translations[language].createToken}
             </button>
             <div className='mt-3 text-sm'>
-              {translations[language].totalFees} : <span className='text-[#02CCE6]'>0.20 SOL</span>{' '}
+              {translations[language].totalFees} <span className='text-[#02CCE6]'>0.20 SOL</span>{' '}
             </div>
           </div>
         </div>
