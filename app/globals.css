@@ -36,6 +36,9 @@
     background: linear-gradient(#ECFFFF, #ECFFFF) padding-box, 
                 linear-gradient(45deg, rgba(220, 31, 255, 1) 0%, rgba(0, 181, 205, 1) 81%, rgba(0, 255, 163, 1) 100%) border-box;
 }
+.modele{
+    box-shadow: -1px 0px 11px 0px rgba(0,0,0,0.5);
+}
 .border-grad2{
     position: relative;
     border: 2px solid transparent; /* Transparent border */

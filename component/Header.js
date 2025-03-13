@@ -1,8 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import {useState } from 'react'
 
 import { FaBars } from 'react-icons/fa6'
 import { CiWallet } from 'react-icons/ci'
@@ -33,7 +32,7 @@ const Header = () => {
     changeLanguage(lang)
     setIsOpen(false)
   }
-
+ 
   return (
     <header className='max-w-6xl py-3 px-2 mx-auto bg-[#FCFCFD] flex justify-between items-center'>
       <Link href='/' className='flex items-center gap-2'>

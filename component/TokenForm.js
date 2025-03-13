@@ -5,10 +5,12 @@ import { MdOutlineFileUpload } from 'react-icons/md'
 import { IoIosInformationCircle } from 'react-icons/io'
 import { FaRegSnowflake } from 'react-icons/fa'
 import { useLanguage } from '@/app/Context/LanguageContext'
+import AllModal from './AllModal'
+
 
 export default function TokenForm () {
   const [image, setImage] = useState(null)
-
+  const [openModal, setOpenModal] = useState(false);
   const { language } = useLanguage()
 
   const translations = {
@@ -95,9 +97,17 @@ export default function TokenForm () {
     setImage(file)
   }
 
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    setOpenModal(true)
+  }
+
   return (
     <div className='max-w-4xl mx-auto p-6'>
-      <form className='mt-8'>
+     <div className=''>
+      {openModal && <AllModal setOpenModal={setOpenModal} />}
+     </div>
+      <form onSubmit={handleSubmit} className='mt-8'>
         <div className='grid md:grid-cols-2 gap-6'>
           <div className='flex flex-col'>
             <label className='text-black mb-1'>

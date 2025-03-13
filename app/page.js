@@ -8,10 +8,12 @@ import LiquidityPool from "@/component/LiquidityPool";
 import Faq from "@/component/Faq";
 import Footer from "@/component/Footer";
 import Headline from "@/component/Headline";
+import { useState } from "react";
 
 
 export default function Home() {
-  
+  const [openModal, setOpenModal] = useState(false);
+
   const translations = {
     en: {
       priorityFees: "Priority Fees",
@@ -25,16 +27,15 @@ export default function Home() {
     },
   };
 
-  const handleMod =()=>{
-    setOpenMod(!openMod);
-  }
+ 
   
   return (
     <>
-     <Header />
+
+     <Header  setOpenModal={setOpenModal} />
      <Banner />
      <Headline translations={translations} />
-     <TokenForm />
+     <TokenForm  openModal={openModal} setOpenModal={setOpenModal} />
      <LiquidityPool />
      <Faq />
      <Footer />
