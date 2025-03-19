@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/app/Context/LanguageContext";
+import Link from "next/link";
 
 const Banner = () => {
   const { language } = useLanguage();
@@ -12,7 +13,7 @@ const Banner = () => {
 
   return (
     <div className="banner text-center py-1.5 text-white">
-      {translations[language]}
+      <Link href='/development'>{translations[language]}</Link>
     </div>
   );
 };
